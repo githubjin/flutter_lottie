@@ -66,6 +66,8 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
         if(args.get("filePath") != null) {
             String key = mRegistrar.lookupKeyForAsset(args.get("filePath").toString());
             animationView.setAnimation(key);
+            int i = key.lastIndexOf("/");
+            animationView.setImageAssetsFolder(key.substring(0, i) + "/images/");
         }
 
         boolean loop, reverse, autoPlay;
