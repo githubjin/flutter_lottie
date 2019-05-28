@@ -119,6 +119,7 @@ public class LottieView implements PlatformView, MethodChannel.MethodCallHandler
 
     @Override
     public View getView() {
+        animationView.setBackgroundColor(Color.TRANSPARENT);
         return animationView;
     }
 
